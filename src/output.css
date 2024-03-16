@@ -1637,6 +1637,10 @@ video {
   border-top-width: 1px;
 }
 
+:is(.dark .dark\:border-b) {
+  border-bottom-width: 1px;
+}
+
 :is(.dark .dark\:border-none) {
   border-style: none;
 }
