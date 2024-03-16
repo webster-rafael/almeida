@@ -963,15 +963,15 @@ video {
 }
 
 .bg-Banner {
-  background-image: url('../public/Banner_Desktop.avif');
+  background-image: url('images/Banner_Desktop.avif');
 }
 
 .bg-Banner-Main {
-  background-image: url('../public/Banner.png');
+  background-image: url('images/Banner.png');
 }
 
 .bg-Banner-Main2 {
-  background-image: url('../public/Banner-Main3.png');
+  background-image: url('.images/Banner-Main3.png');
 }
 
 .bg-cover {
@@ -1867,7 +1867,7 @@ video {
   }
 
   .mobile\:bg-Banner-Mobile {
-    background-image: url('../public/Banner-Mobile.png');
+    background-image: url('images/Banner-Mobile.png');
   }
 
   .mobile\:bg-contain {
@@ -1935,7 +1935,7 @@ video {
   }
 
   .tablet\:bg-Banner-Tablet {
-    background-image: url('../public/Banner-Tablet.png');
+    background-image: url('images/Banner-Tablet.png');
   }
 
   .tablet\:p-5 {
