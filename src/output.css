@@ -1633,16 +1633,12 @@ video {
   margin-right: 2rem;
 }
 
-:is(.dark .dark\:border-t) {
-  border-top-width: 1px;
-}
-
 :is(.dark .dark\:border-b) {
   border-bottom-width: 1px;
 }
 
-:is(.dark .dark\:border-none) {
-  border-style: none;
+:is(.dark .dark\:border-t) {
+  border-top-width: 1px;
 }
 
 :is(.dark .dark\:border-gray-600) {
@@ -1752,7 +1748,7 @@ video {
   --tw-ring-color: rgb(31 41 55 / 0.7);
 }
 
-@media (min-width: 320px) and (max-width: 500px) {
+@media (min-width: 320px) and (max-width: 600px) {
   .mobile\:fixed {
     position: fixed;
   }
@@ -1914,7 +1910,7 @@ video {
   }
 }
 
-@media (min-width: 600px) and (max-width: 999px) {
+@media (min-width: 601px) and (max-width: 999px) {
   .tablet\:top-36 {
     top: 9rem;
   }

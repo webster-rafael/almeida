@@ -10,10 +10,10 @@ export default {
     screens: {
       'mobile': {
         min: '320px',
-        max: '500px'
+        max: '600px'
       },
       'tablet': {
-        min: '600px',
+        min: '601px',
         max: '999px'
       },
       'desktop': {
