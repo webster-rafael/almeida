@@ -352,7 +352,7 @@ const reloadCard = () => {
         if(value != null) {
             let newDiv = document.createElement("li");
             newDiv.innerHTML = `
-            <div><img src = "/public/${value.images}"></div>
+            <div><img src = "images/${value.images}"></div>
             <div class = "cardTitle">${value.name}</div>
             <div class = "cardPrice -mr-4">R$${value.price.toLocaleString()}</div>
 
