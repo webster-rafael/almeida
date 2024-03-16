@@ -23,12 +23,19 @@
   <body class="bg-Branco w-full dark:bg-gray-900 desktop:h-full" id="inicio">
     <div class="text-center bg-Branco text-red-700 dark:text-red-700 fixed z-10 mobile:z-20 left-2/4 -translate-x-2/4 w-80 dark:bg-Branco py-1 text-sm rounded-md font-semibold font-roboto transition duration-300 transform -translate-y-full hidden shadow-md shadow-black" id="modal-cart">Produto adicionado ao carrinho!</div>
     <div class=" shadow-xl shadow-slate-800 h-full w-full m-auto pb-2 transition duration-500 mobile:w-full">
-      <button id="theme-toggle" type="button" class="fixed top-32 left-2 z-10 bg-Amarelo text-gray-700 dark:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-400 dark:hover:text-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-200 rounded-lg text-sm p-3 select-none draggable desktop:top-20 mobile:top-16 tablet:top-36 tablet:p-5">
+      <button id="theme-toggle" type="button" class="fixed top-32 left-2 z-10 bg-Amarelo text-gray-700 dark:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-400 dark:hover:text-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-200 rounded-lg text-sm p-3 select-none draggable desktop:top-20 mobile:top-18 mobile:left-[87%] tablet:top-36 tablet:p-5">
         <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
         <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
     </button>
       <header class="w-full bg-Azul dark:bg-Amarelo flex justify-between px-6 windscreen:mt-0 mobile:flex mobile:justify-between desktop:mt-0 desktop:rounded-none mobile:mt-0 mobile:rounded-none mobile:fixed mobile:z-10" id="shop">
-        <img id="logotipo" class="w-[200px] flex items-center mobile:w-[100px] desktop:w-[130px] dark" src="images/colorida-fe.svg" alt="Logo da Loja">
+        <div class="flex gap-1">
+          <img id="logotipo" class="w-[200px] flex items-center mobile:w-[100px] desktop:w-[130px] dark" src="images/colorida-fe.svg" alt="Logo da Loja">
+          <button id="menuButton" class=" bg-transparent text-white dark:text-Preto rounded-full px-2 tablet:hidden desktop:hidden windscreen:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg " class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
 
         <ul class="w-full items-center flex text-center justify-center gap-4 text-Branco dark:text-Preto mobile:hidden">
             <li class="font-medium hover:underline underline-offset-4 decoration-2 decoration-Branco dark:decoration-black hover:transition duration-500 ease-in">
@@ -46,6 +53,22 @@
             <li class="font-medium hover:underline underline-offset-4 decoration-2 decoration-Branco dark:decoration-black hover:transition duration-500 ease-in">
               <a href="#contato">Contato</a>
             </li>
+        </ul>
+
+        <!-- Lista oculta -->
+        <ul id="mobileMenu" class="w-full items-center flex text-center justify-center gap-4 text-Preto bg-Branco dark:text-white dark:bg-gray-800 fixed top-12 py-1 inset-x-0 hidden font-roboto tablet:hidden desktop:hidden windscreen:hidden">
+          <li class="text-sm font-medium hover:underline underline-offset-4 decoration-2 hover:transition duration-500 ease-in">
+            <a href="#ar-condicionado">Ar-Condicionado</a>
+          </li>
+          <li class="text-sm font-medium hover:underline underline-offset-4 decoration-2 hover:transition duration-500 ease-in">
+            <a href="#climatizador">Climatizador</a>
+          </li>
+          <li class="text-sm font-medium hover:underline underline-offset-4 decoration-2 hover:transition duration-500 ease-in">
+            <a href="#cortinas">Cortinas</a>
+          </li>
+          <li class="text-sm font-medium hover:underline underline-offset-4 decoration-2 hover:transition duration-500 ease-in">
+            <a href="#contato">Contato</a>
+          </li>
         </ul>
 
         <div class="shopping relative flex justify-center items-center text-right">
@@ -81,7 +104,7 @@
 
           <!--===================== cards mobile ==================== -->
 
-          <div id="default-carousel" class="absolute w-full desktop:hidden tablet:hidden windscreen:hidden bottom-[1%]" data-carousel="slide">
+          <div id="default-carousel" class="absolute w-full mobile:hidden desktop:hidden tablet:hidden windscreen:hidden bottom-[1%]" data-carousel="slide">
             <!-- Carousel wrapper -->
             <div class="relative h-66 overflow-hidden rounded-lg">
                  <!-- Item 1 -->
