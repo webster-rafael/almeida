@@ -301,7 +301,7 @@ const initApp = () => {
         let newDiv = document.createElement("div");
         newDiv.classList.add("item");
         newDiv.innerHTML = `
-        <img src = "/public/${value.images}">
+        <img src = "/images/${value.images}">
         <div class = "title border-t pt-1">${value.name}</div>
         <div class = "description">${value.description}</div>
         <div class = "price py-3 font-montserrat font-semibold">R$${value.price.toLocaleString()}</div>
@@ -316,7 +316,7 @@ const initApp = () => {
         let newDiv = document.createElement("div");
         newDiv.classList.add("item", "card2");
         newDiv.innerHTML = `
-        <img src = "/public/${value.images}">
+        <img src = "/images/${value.images}">
         <div class = "title border-t pt-1 dark:text-gray-100">${value.name}</div>
         <div class = "description py-1 dark:text-gray-100">${value.description}</div>
         <div class = "price font-semibold font-montserrat py-2 dark:txt-white text-black">R$${value.price.toLocaleString()}</div>
