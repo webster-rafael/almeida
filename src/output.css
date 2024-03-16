@@ -617,32 +617,16 @@ video {
   top: 0px;
 }
 
+.top-12 {
+  top: 3rem;
+}
+
 .top-32 {
   top: 8rem;
 }
 
 .top-9 {
   top: 2.25rem;
-}
-
-.bottom-4 {
-  bottom: 1rem;
-}
-
-.right-4 {
-  right: 1rem;
-}
-
-.bottom-16 {
-  bottom: 4rem;
-}
-
-.top-10 {
-  top: 2.5rem;
-}
-
-.top-12 {
-  top: 3rem;
 }
 
 .z-10 {
@@ -748,6 +732,10 @@ video {
   height: 1.25rem;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
 .h-8 {
   height: 2rem;
 }
@@ -770,10 +758,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-6 {
-  height: 1.5rem;
 }
 
 .w-10 {
@@ -800,6 +784,10 @@ video {
   width: 1.25rem;
 }
 
+.w-6 {
+  width: 1.5rem;
+}
+
 .w-80 {
   width: 20rem;
 }
@@ -818,14 +806,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-6 {
-  width: 1.5rem;
-}
-
-.w-1 {
-  width: 0.25rem;
 }
 
 .-translate-x-1\/2 {
@@ -893,20 +873,16 @@ video {
   justify-content: space-around;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-10 {
   gap: 2.5rem;
 }
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
 }
 
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
@@ -978,6 +954,10 @@ video {
   background-color: rgb(2 6 23 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -987,17 +967,8 @@ video {
   background-color: rgb(255 255 255 / 0.3);
 }
 
-.bg-gray-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-}
-
-.bg-transparent {
-  background-color: transparent;
-}
-
 .bg-Banner {
-  background-image: url('/images/Banner_Desktop.avif');
+  background-image: url('/src/images/Banner_Desktop.avif');
 }
 
 .bg-Banner-Main {
@@ -1026,10 +997,6 @@ video {
 
 .p-3 {
   padding: 0.75rem;
-}
-
-.p-2 {
-  padding: 0.5rem;
 }
 
 .px-2 {
@@ -1794,60 +1761,16 @@ video {
     left: 56%;
   }
 
+  .mobile\:left-\[87\%\] {
+    left: 87%;
+  }
+
   .mobile\:top-0 {
     top: 0px;
   }
 
-  .mobile\:top-16 {
-    top: 4rem;
-  }
-
   .mobile\:top-3 {
     top: 0.75rem;
-  }
-
-  .mobile\:right-1 {
-    right: 0.25rem;
-  }
-
-  .mobile\:left-0 {
-    left: 0px;
-  }
-
-  .mobile\:left-20 {
-    left: 5rem;
-  }
-
-  .mobile\:left-80 {
-    left: 20rem;
-  }
-
-  .mobile\:left-\[\] {
-    left: ;
-  }
-
-  .mobile\:left-\[50\%\] {
-    left: 50%;
-  }
-
-  .mobile\:left-\[0\%\] {
-    left: 0%;
-  }
-
-  .mobile\:left-\[90\%\] {
-    left: 90%;
-  }
-
-  .mobile\:left-\[9\%\] {
-    left: 9%;
-  }
-
-  .mobile\:left-\[85\%\] {
-    left: 85%;
-  }
-
-  .mobile\:left-\[87\%\] {
-    left: 87%;
   }
 
   .mobile\:z-10 {
@@ -1891,6 +1814,10 @@ video {
     display: none;
   }
 
+  .mobile\:h-\[500px\] {
+    height: 500px;
+  }
+
   .mobile\:h-\[55px\] {
     height: 55px;
   }
@@ -1899,12 +1826,24 @@ video {
     height: 80px;
   }
 
-  .mobile\:h-\[850px\] {
-    height: 850px;
-  }
-
   .mobile\:h-full {
     height: 100%;
+  }
+
+  .mobile\:h-screen {
+    height: 100vh;
+  }
+
+  .mobile\:h-\[\] {
+    height: ;
+  }
+
+  .mobile\:h-\[60\] {
+    height: 60;
+  }
+
+  .mobile\:h-\[600px\] {
+    height: 600px;
   }
 
   .mobile\:w-\[100px\] {
@@ -1953,7 +1892,7 @@ video {
   }
 
   .mobile\:bg-Banner-Mobile {
-    background-image: url('/images/Banner-Mobile.png');
+    background-image: url('/src/images/Banner-Mobile.png');
   }
 
   .mobile\:bg-contain {
@@ -1962,6 +1901,10 @@ video {
 
   .mobile\:bg-center {
     background-position: center;
+  }
+
+  .mobile\:bg-top {
+    background-position: top;
   }
 
   .mobile\:pb-0 {
@@ -2026,14 +1969,6 @@ video {
 
   .tablet\:p-5 {
     padding: 1.25rem;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 500px) {
-  @media (min-width: 600px) and (max-width: 999px) {
-    .mobile\:tablet\:top-36 {
-      top: 9rem;
-    }
   }
 }
 
