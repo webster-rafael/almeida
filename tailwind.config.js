@@ -41,10 +41,10 @@ export default {
       },
 
       backgroundImage: {
-        'Banner': "url('src/images/Banner_Desktop.avif')",
+        'Banner': "url('/images/Banner_Desktop.avif')",
         'Banner-Main': "url('/images/Banner.png')",
-        'Banner-Main2': "url('./images/Banner-Main3.png')",
-        'Banner-Mobile': "url('/src/images/Banner-Mobile.png')",
+        'Banner-Main2': "url('/images/Banner-Main3.png')",
+        'Banner-Mobile': "url('/images/Banner-Mobile.png')",
         'Banner-Tablet': "url('images/Banner-Tablet.png')"
       },
     },
