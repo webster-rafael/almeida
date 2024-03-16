@@ -42,7 +42,7 @@ export default {
 
       backgroundImage: {
         'Banner': "url('/Banner_Desktop.avif')",
-        'Banner-Main': "url('/Banner.png')",
+        'Banner-Main': "url('Banner.png')",
         'Banner-Main2': "url('../public/Banner-Main3.png')",
         'Banner-Mobile': "url('../public/Banner-Mobile.png')",
         'Banner-Tablet': "url('../public/Banner-Tablet.png')"
