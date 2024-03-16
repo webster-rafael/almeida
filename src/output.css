@@ -968,7 +968,7 @@ video {
 }
 
 .bg-Banner {
-  background-image: url('/src/images/Banner_Desktop.avif');
+  background-image: url('/images/Banner_Desktop.avif');
 }
 
 .bg-Banner-Main {
@@ -1814,12 +1814,12 @@ video {
     display: none;
   }
 
-  .mobile\:h-\[500px\] {
-    height: 500px;
-  }
-
   .mobile\:h-\[55px\] {
     height: 55px;
+  }
+
+  .mobile\:h-\[600px\] {
+    height: 600px;
   }
 
   .mobile\:h-\[80px\] {
@@ -1828,22 +1828,6 @@ video {
 
   .mobile\:h-full {
     height: 100%;
-  }
-
-  .mobile\:h-screen {
-    height: 100vh;
-  }
-
-  .mobile\:h-\[\] {
-    height: ;
-  }
-
-  .mobile\:h-\[60\] {
-    height: 60;
-  }
-
-  .mobile\:h-\[600px\] {
-    height: 600px;
   }
 
   .mobile\:w-\[100px\] {
@@ -1892,15 +1876,11 @@ video {
   }
 
   .mobile\:bg-Banner-Mobile {
-    background-image: url('/src/images/Banner-Mobile.png');
+    background-image: url('/images/Banner-Mobile.png');
   }
 
   .mobile\:bg-contain {
     background-size: contain;
-  }
-
-  .mobile\:bg-center {
-    background-position: center;
   }
 
   .mobile\:bg-top {
