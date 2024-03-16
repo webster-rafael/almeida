@@ -28,9 +28,9 @@ themeToggleBtn.addEventListener('click', function() {
     const logo = document.getElementById('logotipo');
       
             if (document.documentElement.classList.contains('dark')) {
-                logo.src = "/public/colorida-fe.svg"; // Caminho da imagem para 
+                logo.src = "images/colorida-fe.svg"; // Caminho da imagem para 
             } else {
-                logo.src = "/public/colorida-fc.svg"; // Caminho da imagem para o modo claro
+                logo.src = "images/colorida-fc.svg"; // Caminho da imagem para o modo claro
             }
 
     

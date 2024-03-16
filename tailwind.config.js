@@ -41,11 +41,11 @@ export default {
       },
 
       backgroundImage: {
-        'Banner': "url('/Banner_Desktop.avif')",
-        'Banner-Main': "url('Banner.png')",
-        'Banner-Main2': "url('../public/Banner-Main3.png')",
-        'Banner-Mobile': "url('../public/Banner-Mobile.png')",
-        'Banner-Tablet': "url('../public/Banner-Tablet.png')"
+        'Banner': "url('images/Banner_Desktop.avif')",
+        'Banner-Main': "url('images/Banner.png')",
+        'Banner-Main2': "url('images/Banner-Main3.png')",
+        'Banner-Mobile': "url('images/Banner-Mobile.png')",
+        'Banner-Tablet': "url('images/Banner-Tablet.png')"
       },
     },
   },
