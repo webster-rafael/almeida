@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/output.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="shortcut icon" href="../public/favicon.svg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <title>Almeida - Climatização</title>
+  </head>
+  <body class="bg-Branco w-full dark:bg-gray-900 desktop:h-full" id="inicio">
+    <div class="text-center bg-Branco text-red-700 dark:text-red-700 fixed z-10 mobile:z-20 left-2/4 -translate-x-2/4 w-80 dark:bg-Branco py-1 text-sm rounded-md font-semibold font-roboto transition duration-300 transform -translate-y-full hidden shadow-md shadow-black" id="modal-cart">Produto adicionado ao carrinho!</div>
+    <div class=" shadow-xl shadow-slate-800 h-full w-full m-auto pb-2 transition duration-500 mobile:w-full">
+      <button id="theme-toggle" type="button" class="fixed top-32 left-2 z-10 bg-Amarelo text-gray-700 dark:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-400 dark:hover:text-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-200 rounded-lg text-sm p-3 select-none draggable desktop:top-20 mobile:top-16 tablet:top-36 tablet:p-5">
+        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+    </button>
+      <header class="w-full bg-Azul dark:bg-Amarelo flex justify-between px-6 windscreen:mt-0 mobile:flex mobile:justify-between desktop:mt-0 desktop:rounded-none mobile:mt-0 mobile:rounded-none mobile:fixed mobile:z-10" id="shop">
+        <img id="logotipo" class="w-[200px] flex items-center mobile:w-[100px] desktop:w-[130px] dark" src="/public/colorida-fe.svg" alt="Logo da Loja">
+
+        <ul class="w-full items-center flex text-center justify-center gap-4 text-Branco dark:text-Preto mobile:hidden">
+            <li class="font-medium hover:underline underline-offset-4 decoration-2 decoration-Branco hover:transition duration-500 ease-in">
+              <a href="#inicio">Início</a>
+            </li>
+            <li class="font-medium hover:underline underline-offset-4 decoration-2 decoration-Branco hover:transition duration-500 ease-in">
+              <a href="#ar-condicionado">Ar-Condicionado</a>
+            </li>
+            <li class="font-medium hover:underline underline-offset-4 decoration-2 decoration-Branco hover:transition duration-500 ease-in">
+              <a href="#climatizador">Climatizador</a>
+            </li>
+            <li class="font-medium hover:underline underline-offset-4 decoration-2 decoration-Branco hover:transition duration-500 ease-in">
+              <a href="#cortinas">Cortinas</a>
+            </li>
+            <li class="font-medium hover:underline underline-offset-4 decoration-2 decoration-Branco hover:transition duration-500 ease-in">
+              <a href="#contato">Contato</a>
+            </li>
+        </ul>
+
+        <div class="shopping relative flex justify-center items-center text-right">
+          <i class="text-4xl text-Branco dark:text-Preto transition-all ease-in cursor-pointer fa-solid fa-bag-shopping hover:text-Amarelo" onclick="shopToogle()"></i>
+          <span class="quantity bg-red-700 text-xs rounded-full flex justify-center items-center text-white absolute top-9 left-[53%] py-[2px] px-2 desktop:top-6 desktop:left-[57%] mobile:top-3 mobile:left-[56%]">0</span>
+        </div>
+      </header>
+
+    <main class="h-[800px] w-full desktop:h-[700px] mobile:h-[850px]">
+      <div class="bg-Banner w-full h-full bg-top shadow- bg-no-repeat flex justify-center flex-col items-center mx-auto mobile:bg-Banner-Mobile mobile:bg-center tablet:bg-Banner-Tablet z-[10px]">
+
+<!-- ===================== Cards ============================ -->
+
+          <div class="grid grid-cols-4 w-2/4 h-screen items-end pb-6 desktop:w-8/12 desktop:h-full desktop:pb-0 mobile:pb-0 mobile:h-full mobile:w-full tablet:w-full tablet:gap-0 mobile:hidden windscreen:z-10 desktop:z-10">
+              <div class="w-[200px] tablet:w-[180px] bg-white pt-2 pb-1 shadow-xl shadow-zinc-800 rounded-lg hover:translate-y-3 mobile:hover:absolute mobile:left-24">
+                  <h1 class="text-black text-center py-2 font-semibold text-sm">Ar-Condicionados Tcl</h1>
+                  <img class="w-full" src="../public/Banner-1.webp" alt="">
+              </div>
+              <div class="w-[200px] tablet:w-[180px] bg-white pt-2 pb-1 shadow-xl shadow-zinc-800 rounded-lg hover:translate-y-3 mobile:hover:absolute mobile:left-24">
+                  <h1 class="text-black text-center py-2 font-semibold text-sm">Ar-Condicionados Gree</h1>
+                  <img src="../public/Banner-2.png" alt="">
+              </div>
+              <div class="w-[200px] tablet:w-[180px] bg-white pt-2 pb-1 shadow-xl shadow-zinc-800 rounded-lg hover:translate-y-3 mobile:hover:absolute mobile:left-24">
+                  <h1 class="text-black text-center py-2 font-semibold text-sm">Climatizadores </h1>
+                  <img src="../public/Banner-3.png" alt="">
+              </div>
+
+              <div class="w-[200px] tablet:w-[180px] bg-white pt-2 pb-1 shadow-xl shadow-zinc-800 rounded-lg hover:translate-y-3 mobile:hover:absolute mobile:left-24">
+                <h1 class="text-black text-center py-2 font-semibold text-sm"><span class="tablet:hidden">Equipamento</span> + Instalação</h1>
+                <img src="../public/Banner-4.png" alt="">
+            </div>
+          </div>
+
+          <!--===================== cards mobile ==================== -->
+
+          <div id="default-carousel" class="absolute w-full desktop:hidden tablet:hidden windscreen:hidden bottom-[1%]" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-66 overflow-hidden rounded-lg">
+                 <!-- Item 1 -->
+                <div class="w-[200px] hidden duration-700 ease-in-out bg-white pt-2 pb-1 shadow-xl shadow-zinc-800 rounded-lg mx-auto" data-carousel-item>
+                    <h1 class="text-black text-center py-2 font-semibold text-sm">Ar-Condicionados Tcl</h1>
+                    <img class="mx-auto"src="../public/Banner-1.webp" alt="">
+                </div>
+                <!-- Item 2 -->
+                <div class="w-[200px] hidden duration-700 ease-in-out bg-white pt-2 pb-1 shadow-xl shadow-zinc-800 rounded-lg mx-auto" data-carousel-item>
+                  <h1 class="text-black text-center py-2 font-semibold text-sm">Ar-Condicionados Gree</h1>
+                    <img src="../public/Banner-2.png" class="" alt="...">
+                </div>
+                <!-- Item 3 -->
+                <div class="w-[200px] hidden duration-700 ease-in-out bg-white pt-2 pb-1 shadow-xl shadow-zinc-800 rounded-lg mx-auto" data-carousel-item>
+                  <h1 class="text-black text-center py-2 font-semibold text-sm">Climatizadores </h1>
+                    <img src="../public/Banner-3.png" class="" alt="...">
+                </div>
+                <!-- Item 4 -->
+                <div class="w-[200px] hidden duration-700 ease-in-out bg-white pt-2 pb-1 shadow-xl shadow-zinc-800 rounded-lg mx-auto" data-carousel-item>
+                  <h1 class="text-black text-center py-2 font-semibold text-sm">Equipamento + Instalação</h1>
+                    <img src="../public/Banner-4.png" class="" alt="...">
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+    </main>
+
+    <section class="h-full windscreen:w-[1366px] windscreen:mx-auto shadow-md shadow-zinc-400 dark:shadow-none desktop:w-[95%] desktop:mx-auto mobile:w-[85%] mobile:mx-auto" id="ar-condicionado">
+        <div class="w-full pl-8 border-b dark:border-none py-6">
+          <h1 class="text-2xl text-Preto dark:text-gray-100 text-opacity-60 font-semibold font-montserrat">Ar-Condicionados</h1>
+        </div>
+        <div class="grid grid-cols-3 my-12 list mobile:grid-cols-1 mobile:mx-auto autoplay2 w-full mobile:mb-0 autoplay2 card2">
+      </div>
+    </section>
+
+    <div class="bg-Banner-Main bg-no-repeat bg-cover w-[1366px] mx-auto h-[219px] shadow-sm shadow-zinc-800 desktop:w-full mobile:w-full mobile:bg-contain mobile:h-[55px] mobile:mb-10 tablet:w-full tablet:h-[105px]">
+    </div>
+
+    <section class="h-full  windscreen:w-[1366px] windscreen:mx-auto shadow-xs desktop:w-[95%] desktop:mx-auto mobile:w-[85%] mobile:mx-auto">
+      <div class="w-full mt-8 -mb-10 pl-8 border-b mobile:border-gray-800 py-6">
+        <h1 class="text-2xl text-Preto dark:text-gray-100 text-opacity-60 font-semibold font-montserrat" id="climatizador">Climatizadores</h1>
+      </div>
+      <div class="grid grid-cols-3 mx-auto my-12 list2 mobile:grid-cols-1 mobile:mx-auto autoplay2">
+      </div>
+    </section>
+
+    <section class="h-full -mt-20 windscreen:w-[1366px] windscreen:mx-auto shadow-xs desktop:w-[95%] desktop:mx-auto mobile:w-[85%] mobile:mx-auto">
+        <div class="w-full mt-8 -mb-10 pl-8 border-b mobile:border-gray-800 py-6">
+          <h1 class="text-2xl text-Preto dark:text-gray-100 text-opacity-60 font-semibold font-montserrat" id="cortinas">Cortinas</h1>
+        </div>
+        <div class="grid grid-cols-3 mx-auto my-12 list3 mobile:grid-cols-1 mobile:mx-auto autoplay2 card2 text-black">
+        </div>
+    </section>
+
+    <div class="bg-Banner-Main2 bg-no-repeat bg-center w-[1366px] mx-auto h-[219px] shadow-sm shadow-zinc-800 desktop:w-full desktop:-mb-10 mobile:w-full mobile:bg-contain mobile:h-[80px] mobile:-mb-12 tablet:w-full tablet:h-[200px]">
+    </div>
+      
+    <section class="h-full windscreen:w-[1366px] windscreen:mx-auto shadow-md shadow-zinc-400 dark:shadow-none dark:bg-gray-800 desktop:w-full desktop:py-4">
+      <div class="w-full mt-8 -mb-10 pl-8 border-b py-6">
+        <h1 class="text-2xl text-Azul text-opacity-60 font-semibold font-montserrat">Mais Procurados</h1>
+      </div>
+      <div class="grid grid-cols-4 gap-10 mx-auto my-12 list4 mobile:grid-cols-1 mobile:mx-auto dark:mx-8 text-white tablet:grid-cols-2"></div> 
+    </section>
+    </div>
+
+   <!-- =========================== Carrinho =========================       -->
+
+    <div class="card fixed top-0 left-[100%] w-[500px] bg-slate-950 h-screen transition duration-500 mobile:w-[103%] mobile:top-0">
+        <div class="flex justify-around w-full items-center">
+          <h1 class="text-white text-2xl font-bold m-0 px-5 h-20 flex items-center">Card</h1>
+          <button class="px-4 bg-white h-8 font-bold rounded-md hover:bg-opacity-60 hover:text-white text-purple-800" onclick="enviarMensagem()">Comprar</button>
+    </div>
+      </section>
+    <ul class="listCard"></ul>
+    <div class="checkOut absolute bottom-0 w-full grid grid-cols-2">
+      <div class="total bg-purple-700 text-white w-full h-[70px] flex justify-center items-center font-bold cursor-pointer">
+        <button>R$0</button>
+      </div>
+      <div class="closeShopping bg-purple-700 w-full h-[70px] flex justify-center items-center font-bold cursor-pointer even:bg-black text-white">
+        <button id="close">close</button>
+      </div>
+      </div>
+    </div>
+
+  <!-- ====================== Footer ================================= -->
+
+  <footer class="bg-Azul dark:bg-gray-900 dark:border-t dark:border-gray-600" id="contato">
+    <div class="mx-auto w-full max-w-screen-xl px-4 py-1">
+        <div class="flex justify-between mobile:flex-col">
+          <div class="mb-6">
+              <a href="#" class="flex items-center justify-center">
+                  <img src="../public/colorida-fe.svg" class="w-40" alt="FlowBite Logo" />
+                  
+              </a>
+          </div>
+          <div class="grid grid-cols-4 gap-10 sm:gap-6 pt-6 mobile:grid-cols-2 mobile:pt-4">
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white mobile:text-base mobile:mb-4">Desenvolvedor</h2>
+                  <ul class="text-gray-100 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="https://websterdeveloper.pro/" class="hover:underline">Site</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://www.instagram.com/webster.dev/" class="hover:underline">Instagram</a>
+                      </li>
+
+                      <li>
+                          <a href="mailto:webster.rafael2014@gmail.com" class="hover:underline">Email</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white mobile:text-base mobile:mb-4">Follow us</h2>
+                  <ul class="text-gray-100 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Tiktok</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Facebook</a>
+                      </li>
+
+                      <li>
+                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Instagram</a>
+                    </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white mobile:text-base mobile:mb-4">Legal</h2>
+                  <ul class="text-gray-100 dark:text-gray-400 font-medium">
+                      <li class="mb-4">
+                          <a href="#" class="hover:underline mobile:text-sm">Política de Privacidade</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="#" class="hover:underline mobile:text-sm">Termos &amp; Condições</a>
+                      </li>
+
+                      <li>
+                        <a href="#" class="hover:underline mobile:text-sm">Devoluções</a>
+                    </li>
+                  </ul>
+              </div>
+
+              <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white mobile:text-base mobile:mb-4">Suporte</h2>
+                <ul class="text-gray-100 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline mobile:text-sm">(67) 99999-9999</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline mobile:text-sm">Telefone: (67) 3434-3434</a>
+                    </li>
+
+                    <li class="mb-4">
+                      <a href="" class="hover:underline mobile:text-sm">Email: almeida@sac.com</a>
+                    </li>
+                </ul>
+            </div>
+          </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between mobile:justify-center">
+          <span class="text-sm text-gray-100 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">Webster Dev™</a>. Todos os Direitos Reservados.
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0 desktop:pb-2 mobile:justify-center">
+              <a href="https://www.facebook.com/WebsterSwan/" target="_blank" class="text-gray-100 hover:text-gray-700 dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                    </svg>
+                  <span class="sr-only">Facebook page</span>
+              </a>
+              <a href="https://discord.gg/vQDkKBYg" target="_blank" class="text-gray-100 hover:text-gray-700 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                        <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                    </svg>
+                  <span class="sr-only">Discord community</span>
+              </a>
+              <a href="#" class="text-gray-100 hover:text-gray-700 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                    <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Twitter page</span>
+              </a>
+              <a href="https://github.com/webster-rafael" target="_blank" class="text-gray-100 hover:text-gray-700 dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="sr-only">GitHub account</span>
+              </a>
+          </div>
+      </div>
+    </div>
+</footer>
+
+
+  <script>
+    // Função para adicionar um produto ao carrinho
+    function adicionarAoCarrinho(id) {
+            var produto = products.find(function(item) {
+                return item.id === id;
+            });
+
+            if (!produto) {
+                alert('Produto não encontrado!');
+                return;
+            }
+
+            var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            carrinho.push(produto);
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            alert('Produto adicionado ao carrinho!');
+        }
+
+        // Verificar e exibir itens no carrinho ao carregar a página
+        window.onload = function() {
+            var carrinho = JSON.parse(localStorage.getItem('carrinho'));
+            if (carrinho && carrinho.length > 0) {
+                alert('Você tem ' + carrinho.length + ' produto(s) no carrinho!');
+            }
+        };
+
+        // Limpar localStorage ao recarregar a página
+        window.addEventListener('beforeunload', function() {
+            localStorage.removeItem('carrinho');
+        });
+</script>
+
+
+    <script src="main.js"></script>
+    <script src="carrosel.js"></script>
+    <script src="darkmode.js"></script>
+    <script src="https://kit.fontawesome.com/955f6c3651.js" crossorigin="anonymous"></script>
+  </body>
+</html>

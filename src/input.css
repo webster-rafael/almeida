@@ -1,0 +1,303 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark {
+    color: #efefef;
+}
+
+.active .card {
+    left: calc(100% - 500px);
+}
+
+@media only screen and (max-width: 600px) {
+    .active .card {
+        left: calc(100% - 400px);
+    }
+  }
+
+.active .container {
+    transform: translateX(-200px);
+}
+
+
+.list2 .item,
+.list3 .item
+ {
+    text-align: center;
+    background-color: #ffff;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    padding: 20px;
+    letter-spacing: 1px;
+    transition: all 0.25s ease;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.list .item {
+    text-align: center;
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    padding: 20px;
+    letter-spacing: 1px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: rgba(42, 43, 46, 0.37) 0px 8px 24px;
+}
+
+
+
+.list4 .item {
+    text-align: center;
+    cursor: pointer;
+}
+
+.dark .list .item,
+.dark .list2 .item,
+.dark .list3 .item {
+    background-color: rgba(42, 43, 46, 0.37);
+}
+
+@media only screen and (min-width: 600px) {
+    .list .item,
+    .list2 .item,
+    .list3 .item,
+    .list4 .item {
+        width: 90%;
+        margin: 0 auto;
+    }
+  }
+  
+
+.list2 .item:hover,
+.list3 .item:hover
+ {
+    background-color: #e9e6e6;
+
+}
+
+.list4 .item:hover,
+.list .item:hover
+{
+    box-shadow: rgba(42, 43, 46, 0.37) 0px 8px 24px;
+}
+
+
+
+.adicionarCarrinho4 {
+    background-color: #2084EAFF;
+    color: #efefef;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 80%;
+    padding: 10px;
+    border: 3px solid #efefef;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card2:hover .adicionarCarrinho4 {
+    opacity: 1;
+  }
+
+.list .item img,
+.list2 .item img,
+.list3 .item img,
+.list4 .item img {
+    width: 100%;
+    height: 350px;
+}
+
+.list .item .title,
+.list2 .item .title,
+.list3 .item .title,
+.list4 .item .title {
+    font-weight: 600;
+    color: Black;
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+.list .item .description,
+.list2 .item .description,
+.list3 .item .description,
+.list4 .item .description {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.527);
+    margin-top: 4px;
+    font-family: Roboto, san-serif;
+    font-size: 0.680rem;
+}
+
+.list .item .price,
+.list2 .item .price,
+.list3 .item .price
+.list4 .item .price {
+    margin-bottom: 4px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+
+.list .item .promo,
+.list2 .item .promo, 
+.list3 .item .promo, 
+.list4 .item .promo
+{
+    font-family: Roboto, san-serif;
+    font-size: 0.6rem;
+    color: #bd990a;
+    margin-bottom: 4px;
+}
+
+.list .item:hover .title,
+.list .item:hover .price,
+.list2 .item:hover .title,
+.list2 .item:hover .price,
+.list3 .item:hover .title,
+.list3 .item:hover .price,
+.list4 .item:hover .title,
+.list4 .item:hover .price {
+    color: black;
+}
+
+.dark .list .item .title,
+.dark .list .item .price,
+.dark .list .item .description,
+.dark .list2 .item .title,
+.dark .list2 .item .price,
+.dark .list2 .item .description,
+.dark .list3 .item .title,
+.dark .list3 .item .price,
+.dark .list3 .item .description,
+.dark .list4 .item .title,
+.dark .list4 .item .price,
+.dark .list4 .item .description {
+    color: rgba(255, 255, 255, 0.781);
+}
+
+
+.list .item button,
+.list2 .item button,
+.list3 .item button {
+    background-color: #2084EAFF;
+    color: #efefef;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #efefef;
+    border-radius: 8px;
+    cursor: pointer;
+    transform: all 0.25s ease;
+}
+
+.list .item button:hover,
+.list2 .item button:hover,
+.list3 .item button:hover,
+.list4 .item button:hover {
+    background-color: #FFCC00;
+    color: #efefef;
+}
+
+.listCard li {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+}
+
+.listCard li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCard li img {
+    width: 90%;
+}
+
+.listCard .count {
+    margin: 0px 10px;
+}
+
+.cardTitle,
+.cardPrice {
+    color: #ffffff;
+    font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .cardTitle,
+    .cardPrice {
+    color: #ffffff;
+    font-size: 0.6rem;
+}
+}
+
+.cardButton {
+    width: 28px;
+    height: 28px;
+    color: #efefef;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) 
+{
+    .list .item .description {
+        font-size: 0.6rem;
+    }
+
+    .list .item .price {
+        margin: 8px 0;
+    }
+}
+
+
+.list .item,
+.list2 .item,
+.list3 .item {
+    margin: 0 10px;
+}
+
+.bg-Banner {
+  position: relative;
+}
+
+.dark .bg-Banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.425); /* Ajuste o último valor (0.5) para controlar a opacidade da sobreposição */
+}
+
+
+
+
+
+
+
+
+
+
