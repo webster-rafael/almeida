@@ -322,40 +322,6 @@
     </div>
 </footer>
 
-
-  <script>
-    // Função para adicionar um produto ao carrinho
-    function adicionarAoCarrinho(id) {
-            var produto = products.find(function(item) {
-                return item.id === id;
-            });
-
-            if (!produto) {
-                alert('Produto não encontrado!');
-                return;
-            }
-
-            var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-            carrinho.push(produto);
-            localStorage.setItem('carrinho', JSON.stringify(carrinho));
-            alert('Produto adicionado ao carrinho!');
-        }
-
-        // Verificar e exibir itens no carrinho ao carregar a página
-        window.onload = function() {
-            var carrinho = JSON.parse(localStorage.getItem('carrinho'));
-            if (carrinho && carrinho.length > 0) {
-                alert('Você tem ' + carrinho.length + ' produto(s) no carrinho!');
-            }
-        };
-
-        // Limpar localStorage ao recarregar a página
-        window.addEventListener('beforeunload', function() {
-            localStorage.removeItem('carrinho');
-        });
-</script>
-
-
     <script src="main.js"></script>
     <script src="carrosel.js"></script>
     <script src="darkmode.js"></script>
