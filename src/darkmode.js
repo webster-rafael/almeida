@@ -11,12 +11,12 @@ function toggleTheme() {
         document.documentElement.classList.remove('dark');
         themeToggleLightIcon.classList.add('hidden');
         themeToggleDarkIcon.classList.remove('hidden');
-        logo.src = "images/colorida-fc.svg"; // Caminho da imagem para o modo claro
+        logo.src = "images/colorida-fe.svg"; // Caminho da imagem para o modo claro
     } else {
         document.documentElement.classList.add('dark');
         themeToggleLightIcon.classList.remove('hidden');
         themeToggleDarkIcon.classList.add('hidden');
-        logo.src = "images/colorida-fe.svg"; // Caminho da imagem para o modo escuro
+        logo.src = "images/colorida-fc.svg"; // Caminho da imagem para o modo escuro
     }
 }
 
