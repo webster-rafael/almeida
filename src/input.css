@@ -103,12 +103,12 @@
     border: 3px solid #efefef;
     border-radius: 8px;
     cursor: pointer;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 
-.card2:hover .list4 .item button {
+.item:hover button {
     opacity: 1;
   }
 
