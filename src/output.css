@@ -669,6 +669,10 @@ video {
   z-index: 10px;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .m-0 {
   margin: 0px;
 }
