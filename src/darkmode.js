@@ -1,62 +1,37 @@
 // ================ DarkMode ====================
 
-if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark');
-} else {
-    document.documentElement.classList.remove('dark')
-}
-
-
 var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+var themeToggleBtn = document.getElementById('theme-toggle');
+var logo = document.getElementById('logotipo');
 
-// Change the icons inside the button based on previous settings
-if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+// Define a função para alternar entre os modos claro e escuro
+function toggleTheme() {
+    if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        themeToggleLightIcon.classList.add('hidden');
+        themeToggleDarkIcon.classList.remove('hidden');
+        logo.src = "images/colorida-fc.svg"; // Caminho da imagem para o modo claro
+    } else {
+        document.documentElement.classList.add('dark');
+        themeToggleLightIcon.classList.remove('hidden');
+        themeToggleDarkIcon.classList.add('hidden');
+        logo.src = "images/colorida-fe.svg"; // Caminho da imagem para o modo escuro
+    }
+}
+
+// Adiciona um ouvinte de evento para o botão de alternância
+themeToggleBtn.addEventListener('click', function() {
+    toggleTheme();
+});
+
+// Define o ícone inicial com base no estado atual
+if (document.documentElement.classList.contains('dark')) {
     themeToggleLightIcon.classList.remove('hidden');
 } else {
     themeToggleDarkIcon.classList.remove('hidden');
 }
 
-var themeToggleBtn = document.getElementById('theme-toggle');
-
-themeToggleBtn.addEventListener('click', function() {
-
-   
-    themeToggleDarkIcon.classList.toggle('hidden');
-    themeToggleLightIcon.classList.toggle('hidden');
-
-    const logo = document.getElementById('logotipo');
-      
-            if (document.documentElement.classList.contains('dark')) {
-                logo.src = "images/colorida-fe.svg"; // Caminho da imagem para 
-            } else {
-                logo.src = "images/colorida-fc.svg"; // Caminho da imagem para o modo claro
-            }
-
-    
-    if (localStorage.getItem('color-theme')) {
-        if (localStorage.getItem('color-theme') === 'light') {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('color-theme', 'dark');
-            
-        } else {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('color-theme', 'light');
-            
-        }
-
-  
-    } else {
-        if (document.documentElement.classList.contains('dark')) {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('color-theme', 'light');
-        } else {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('color-theme', 'dark');
-        }
-    }
-    
-});
 
     const themeToggle = document.getElementById('theme-toggle');
 
