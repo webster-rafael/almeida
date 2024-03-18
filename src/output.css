@@ -544,6 +544,34 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 320px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 601px) {
+  .container {
+    max-width: 601px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1029,11 +1057,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1319,6 +1342,7 @@ video {
 .list4 .item {
   text-align: center;
   cursor: pointer;
+  padding: 10px 0;
 }
 
 .dark .list .item,
@@ -1330,8 +1354,7 @@ video {
 @media only screen and (min-width: 600px) {
   .list .item,
     .list2 .item,
-    .list3 .item,
-    .list4 .item {
+    .list3 .item {
     width: 90%;
     margin: 0 auto;
   }
@@ -1349,7 +1372,7 @@ video {
   box-shadow: rgba(42, 43, 46, 0.37) 0px 8px 24px;
 }
 
-.adicionarCarrinho4 {
+.list4 .item button {
   background-color: #2084EAFF;
   color: #efefef;
   font-size: 1rem;
@@ -1359,11 +1382,11 @@ video {
   border: 3px solid #efefef;
   border-radius: 8px;
   cursor: pointer;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
-.card2:hover .adicionarCarrinho4 {
+.card2:hover .list4 .item button {
   opacity: 1;
 }
 
@@ -1398,7 +1421,7 @@ video {
 
 .list .item .price,
 .list2 .item .price,
-.list3 .item .price
+.list3 .item .price,
 .list4 .item .price {
   margin-bottom: 4px;
   color: rgb(0, 0, 0);
@@ -1414,17 +1437,6 @@ video {
   font-size: 0.6rem;
   color: #bd990a;
   margin-bottom: 4px;
-}
-
-.list .item:hover .title,
-.list .item:hover .price,
-.list2 .item:hover .title,
-.list2 .item:hover .price,
-.list3 .item:hover .title,
-.list3 .item:hover .price,
-.list4 .item:hover .title,
-.list4 .item:hover .price {
-  color: black;
 }
 
 .dark .list .item .title,
@@ -1969,6 +1981,11 @@ video {
     z-index: 10;
   }
 
+  .desktop\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .desktop\:mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -2010,6 +2027,14 @@ video {
     width: 100%;
   }
 
+  .desktop\:justify-center {
+    justify-content: center;
+  }
+
+  .desktop\:gap-4 {
+    gap: 1rem;
+  }
+
   .desktop\:rounded-none {
     border-radius: 0px;
   }
@@ -2025,6 +2050,10 @@ video {
 
   .desktop\:pb-2 {
     padding-bottom: 0.5rem;
+  }
+
+  .desktop\:pl-0 {
+    padding-left: 0px;
   }
 }
 

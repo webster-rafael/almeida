@@ -59,7 +59,9 @@
 .list4 .item {
     text-align: center;
     cursor: pointer;
+    padding: 10px 0;
 }
+
 
 .dark .list .item,
 .dark .list2 .item,
@@ -70,12 +72,12 @@
 @media only screen and (min-width: 600px) {
     .list .item,
     .list2 .item,
-    .list3 .item,
-    .list4 .item {
+    .list3 .item {
         width: 90%;
         margin: 0 auto;
     }
   }
+
   
 
 .list2 .item:hover,
@@ -91,9 +93,7 @@
     box-shadow: rgba(42, 43, 46, 0.37) 0px 8px 24px;
 }
 
-
-
-.adicionarCarrinho4 {
+.list4 .item button {
     background-color: #2084EAFF;
     color: #efefef;
     font-size: 1rem;
@@ -103,11 +103,12 @@
     border: 3px solid #efefef;
     border-radius: 8px;
     cursor: pointer;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 
-.card2:hover .adicionarCarrinho4 {
+
+.card2:hover .list4 .item button {
     opacity: 1;
   }
 
@@ -142,7 +143,7 @@
 
 .list .item .price,
 .list2 .item .price,
-.list3 .item .price
+.list3 .item .price,
 .list4 .item .price {
     margin-bottom: 4px;
     color: rgb(0, 0, 0);
@@ -160,16 +161,6 @@
     margin-bottom: 4px;
 }
 
-.list .item:hover .title,
-.list .item:hover .price,
-.list2 .item:hover .title,
-.list2 .item:hover .price,
-.list3 .item:hover .title,
-.list3 .item:hover .price,
-.list4 .item:hover .title,
-.list4 .item:hover .price {
-    color: black;
-}
 
 .dark .list .item .title,
 .dark .list .item .price,

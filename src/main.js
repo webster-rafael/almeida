@@ -1,4 +1,3 @@
-
 // ============================ Loja =======================================
 
 
@@ -169,7 +168,7 @@ let products = [
 
 let products2 = [
     {
-        "id": 0,
+        "id": 16,
         "name":"Climatizador 45L Eos",
         "images": "Clima-1.webp",
         "price": 1398.99,
@@ -177,7 +176,7 @@ let products2 = [
     },
 
     {
-        "id": 1,
+        "id": 17,
         "name":"Climatizador 7L Eos",
         "images": "Clima-2.webp",
         "price": 789.99,
@@ -185,7 +184,7 @@ let products2 = [
     },
 
     {
-        "id": 2,
+        "id": 18,
         "name":"Climatizador 3,5L Eos",
         "images": "Clima-3.webp",
         "price": 549.99,
@@ -195,7 +194,7 @@ let products2 = [
 
 let products3 = [
     {
-        "id": 0,
+        "id": 19,
         "name":"Cortina de Ar 90cm Eos 220w",
         "description":"Sem controle",
         "images": "Cortina-1.webp",
@@ -204,7 +203,7 @@ let products3 = [
     },
 
     {
-        "id": 1,
+        "id": 20,
         "name":"Cortina de Ar 90cm Eos 220w",
         "description":"Com controle",
         "images": "Cortina-2.webp",
@@ -213,7 +212,7 @@ let products3 = [
     },
 
     {
-        "id": 2,
+        "id": 21,
         "name":"Cortina de Ar 100cm Eos 220w",
         "description":"Sem controle",
         "images": "Cortina-3.webp",
@@ -221,7 +220,7 @@ let products3 = [
         "promo": "ou R$ 1.100,00 em 8x sem juros"
     },
     {
-        "id": 3,
+        "id": 22,
         "name":"Cortina de Ar 100cm Eos 220w",
         "description":"Com controle",
         "images": "Cortina-4.webp",
@@ -231,7 +230,7 @@ let products3 = [
 ]
 let products4 = [
     {
-        "id": 0,
+        "id": 23,
         "name":"Ar-Condicionado 12Mil BTUs Inverter Gree 220w",
         "description":"Incluso Instalação com tubulação até 3m",
         "images": "Ar-8.webp",
@@ -240,7 +239,7 @@ let products4 = [
     },
 
     {
-        "id": 1,
+        "id": 24,
         "name":"Ar-Condicionado 9mil BTUs Inverter Samsung 220w",
         "description":"Incluso Instalação com tubulação até 3m",
         "images": "Ar-4.webp",
@@ -249,14 +248,14 @@ let products4 = [
     },
 
     {
-        "id": 2,
+        "id": 25,
         "name":"Climatizador 45L Eos",
         "images": "Clima-1.webp",
         "price": 1398.99,
         "promo": "ou R$ 1.510,90 em 8x sem juros"
     },
     {
-        "id": 3,
+        "id": 26,
         "name":"Ar-Condicionado 9mil BTUs Inverter Eletrolux 220w",
         "description":"Incluso Instalação com tubulação até 3m",
         "images": "Ar-3.webp",
@@ -264,290 +263,168 @@ let products4 = [
         "promo": "ou R$ 2.810,90 em 8x sem juros"
     },
 ]
-
 let listCards = [];
 
 const initApp = () => {
-    products.forEach((value, key) => {
-        let newDiv = document.createElement("div");
-        newDiv.classList.add("item", "card3");
-        newDiv.innerHTML = `
-        <img src = "images/${value.images}">
-        <div class = "title border-t pt-1">${value.name}</div>
-        <div class = "description">${value.description}</div>
-        <div class = "price">R$${value.price.toLocaleString()}</div>
-        <div class = "promo">${value.promo}</div>
-        <button class="adicionarCarrinho" onclick = " adicionarAoCarrinho(${key})">Adicione ao Carrinho
-        </button>
-        `
-        list.appendChild(newDiv)
-    })
+    renderProducts(products, list, addToCart);
+    renderProducts(products2, list2, addToCart);
+    renderProducts(products3, list3, addToCart);
+    renderProducts(products4, list4);
+}
 
-    products2.forEach((value, key) => {
-        let newDiv = document.createElement("div");
+const renderProducts = (productsList, container, addToCartFunction) => {
+    productsList.forEach((product) => {
+        const newDiv = document.createElement("div");
         newDiv.classList.add("item");
         newDiv.innerHTML = `
-        <img src = "/images/${value.images}">
-        <div class = "title border-t pt-1">${value.name}</div>
-        <div class = "price">R$${value.price.toLocaleString()}</div>
-        <div class = "promo">${value.promo}</div>
-        <button class="adicionarCarrinho2" onclick = " adicionarAoCarrinho2(${key})">Adicione ao Carrinho
-        </button>
-        `
-        list2.appendChild(newDiv)
-    })
+            <img src="images/${product.images}">
+            <div class="title border-t pt-1">${product.name}</div>
+            <div class="description">${product.description}</div>
+            <div class="price">R$${product.price.toLocaleString()}</div>
+            <div class="promo">${product.promo}</div>
+            <button class="adicionarCarrinho" onclick="addToCart(${product.id})">Adicione ao Carrinho</button>
+        `;
+        container.appendChild(newDiv);
+    });
+}
 
-    products3.forEach((value, key) => {
-        let newDiv = document.createElement("div");
-        newDiv.classList.add("item");
-        newDiv.innerHTML = `
-        <img src = "/images/${value.images}">
-        <div class = "title border-t pt-1">${value.name}</div>
-        <div class = "description">${value.description}</div>
-        <div class = "price py-3 font-montserrat font-semibold">R$${value.price.toLocaleString()}</div>
-        <div class = "promo">${value.promo}</div>
-        <button class="adicionarCarrinho3" onclick = " adicionarAoCarrinho3(${key})">Adicione ao Carrinho
-        </button>
-        `
-        list3.appendChild(newDiv)
-    })
-
-    products4.forEach((value, key) => {
-        let newDiv = document.createElement("div");
+const renderProducts4 = (productsList, container) => { // Renderizando produtos da lista 4 com comportamento específico
+    productsList.forEach((product) => {
+        const newDiv = document.createElement("div");
         newDiv.classList.add("item", "card2");
         newDiv.innerHTML = `
-        <img src = "/images/${value.images}">
-        <div class = "title border-t pt-1 dark:text-gray-100">${value.name}</div>
-        <div class = "description py-1 dark:text-gray-100">${value.description}</div>
-        <div class = "price font-semibold font-montserrat py-2 dark:txt-white text-black">R$${value.price.toLocaleString()}</div>
-        <div class = "promo">${value.promo}</div>
-        <button class="adicionarCarrinho4" onclick = "adicionarAoCarrinho4(${key})">Comprar Agora
-        </button>
-        `
-        list4.appendChild(newDiv)
-    })
-
-
+            <img src="/images/${product.images}">
+            <div class="title border-t pt-1 dark:text-gray-100">${product.name}</div>
+            <div class="description py-1 dark:text-gray-100">${product.description}</div>
+            <div class="price font-semibold font-montserrat py-2">R$${product.price.toLocaleString()}</div>
+            <div class="promo">${product.promo}</div>
+            <button class="adicionarCarrinho4" onclick="addToCart4(${product.id})">Comprar Agora</button>
+        `;
+        list4.appendChild(newDiv);
+    });
 }
 
-initApp()
+const addToCart = (productId) => {
+    const product = findProduct(productId);
+    if (!product) return;
 
-const addToCard = key => {
-    if(listCards[key] == null) {
-        listCards[key] = JSON.parse(JSON.stringify(products[key]));
-        listCards[key].quantity = 1
+    const existingItem = listCards.find(item => item.id === product.id);
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        listCards.push({...product, quantity: 1});
     }
 
-    reloadCard()
+    reloadCard();
+    updateLocalStorage();
+
+    const modal = document.getElementById("modal-cart");
+    modal.classList.remove("hidden");
+    modal.classList.add("-translate-y-full");
+    setTimeout(() => {
+        modal.classList.remove("-translate-y-full");
+        setTimeout(() => {
+            modal.classList.add("-translate-y-full");
+            setTimeout(() => {
+                modal.classList.add("hidden");
+            }, 300);
+        }, 4000);
+    }, 0);
 }
+
+const addToCart4 = (productId) => { // Função específica para lista4
+    const product = findProduct(productId);
+    if (!product) return;
+
+    const existingItem = listCards.find(item => item.id === product.id);
+    if (existingItem) {
+        existingItem.quantity++;
+        
+    } else {
+        listCards.push({...product, quantity: 1}); // Adicionando ao carrinho sem preço extra
+    }
+
+    reloadCard();
+    updateLocalStorage();
+
+    updateLocalStorage();
+    const modal = document.getElementById("modal-cart");
+    modal.classList.remove("hidden");
+    modal.classList.add("-translate-y-full");
+    setTimeout(() => {
+        modal.classList.remove("-translate-y-full");
+        setTimeout(() => {
+            modal.classList.add("-translate-y-full");
+            setTimeout(() => {
+                modal.classList.add("hidden");
+            }, 300);
+        }, 4000);
+    }, 0);
+}
+
+const findProduct = (productId) => {
+    const allProducts = [...products, ...products2, ...products3, ...products4];
+    return allProducts.find(product => product.id === productId);
+}
+
 const reloadCard = () => {
     listCard.innerHTML = "";
     let count = 0;
     let totalPrice = 0;
 
-    listCards.forEach((value, key) => {
-        totalPrice = totalPrice + value.price;
-        count = count + value.quantity;
+    listCards.forEach((item) => {
+        totalPrice += item.price * item.quantity;
+        count += item.quantity;
 
-        if(value != null) {
-            let newDiv = document.createElement("li");
-            newDiv.innerHTML = `
-            <div><img src = "images/${value.images}"></div>
-            <div class = "cardTitle">${value.name}</div>
-            <div class = "cardPrice -mr-4">R$${value.price.toLocaleString()}</div>
-
+        const newDiv = document.createElement("li");
+        newDiv.innerHTML = `
+            <div><img src="images/${item.images}"></div>
+            <div class="cardTitle">${item.name}</div>
+            <div class="cardPrice -mr-4">R$${(item.price * item.quantity).toLocaleString()}</div>
             <div class="pr-10">
-                    <button style = "background-color:#560bad;" class = "cardButton" onclick = "changeQuantity(${key}, ${value.quantity - 1})">-</button>
-                    <div class = "count">${value.quantity}</div>
-                    <button style = "background-color:#560bad;" class = "cardButton" onclick = "changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                <button style="background-color:#560bad;" class="cardButton" onclick="changeQuantity(${item.id}, ${item.quantity - 1})">-</button>
+                <div class="count">${item.quantity}</div>
+                <button style="background-color:#560bad;" class="cardButton" onclick="changeQuantity(${item.id}, ${item.quantity + 1})">+</button>
             </div>
-        `
+        `;
         listCard.appendChild(newDiv);
-        }
+    });
 
-        total.innerText = 'R$' + totalPrice.toLocaleString();
-        quantity.innerText = count;
-    })
+    total.innerText = 'R$' + totalPrice.toLocaleString();
+    quantity.innerText = count;
 }
 
-const changeQuantity = (key, quantity) => {
-    if(quantity == 0) {
-        delete listCards[key]
-    }
-    else {
-        listCards[key].quantity = quantity;
-        listCards[key].price = quantity * products[key].price
+const changeQuantity = (productId, quantity) => {
+    const itemIndex = listCards.findIndex(item => item.id === productId);
+    if (itemIndex === -1) return;
+
+    if (quantity <= 0) {
+        listCards.splice(itemIndex, 1);
+    } else {
+        listCards[itemIndex].quantity = quantity;
     }
 
     reloadCard();
     updateLocalStorage();
 }
 
-window.onload = function() {
-    var carrinho = JSON.parse(localStorage.getItem('carrinho'));
-    if (carrinho) {
-        listCards = carrinho;
+window.onload = () => {
+    const storedCards = JSON.parse(localStorage.getItem('carrinho'));
+    if (storedCards) {
+        listCards = storedCards;
         reloadCard();
     }
 };
 
-// Adicionar produtos ao carrinho e ao localStorage
-function adicionarAoCarrinho(key) {
-    if (!listCards[key]) {
-        listCards[key] = JSON.parse(JSON.stringify(products[key]));
-        listCards[key].quantity = 1;
-    } else {
-        listCards[key].quantity++;
-    }
-    reloadCard();
-    updateLocalStorage();
-
-    var modal = document.getElementById("modal-cart");
-    
-    modal.classList.remove("hidden");
-    
-    modal.classList.add("-translate-y-full");
-    
-    setTimeout(function() {
-        modal.classList.remove("-translate-y-full");
-        
-        setTimeout(function() {
-            modal.classList.add("-translate-y-full");
-            
-            setTimeout(function() {
-                modal.classList.add("hidden");
-            }, 300); 
-        }, 4000); 
-    }, 0);
-
-}
-
-function updateLocalStorage() {
+const updateLocalStorage = () => {
     localStorage.setItem('carrinho', JSON.stringify(listCards));
 }
 
-document.getElementById('close').addEventListener('click', function() {
-    
+document.getElementById('close').addEventListener('click', () => {
     location.reload();
 });
 
-function adicionarAoCarrinho2(key) {
-    if (!listCards[key]) {
-        listCards[key] = JSON.parse(JSON.stringify(products2[key]));
-        listCards[key].quantity = 1;
-    } else {
-        listCards[key].quantity++;
-    }
-    reloadCard();
-    updateLocalStorage();
-    
-    var modal = document.getElementById("modal-cart");
-    
-    modal.classList.remove("hidden");
-    
-    modal.classList.add("-translate-y-full");
-    
-    setTimeout(function() {
-        modal.classList.remove("-translate-y-full");
-        
-        setTimeout(function() {
-            modal.classList.add("-translate-y-full");
-            
-            setTimeout(function() {
-                modal.classList.add("hidden");
-            }, 300); 
-        }, 4000); 
-    }, 0); 
-
-
-}
-
-function updateLocalStorage() {
-    localStorage.setItem('carrinho', JSON.stringify(listCards));
-}
-
-document.getElementById('close').addEventListener('click', function() {
-    
-    location.reload();
-});
-
-function adicionarAoCarrinho3(key) {
-    if (!listCards[key]) {
-        listCards[key] = JSON.parse(JSON.stringify(products3[key]));
-        listCards[key].quantity = 1;
-    } else {
-        listCards[key].quantity++;
-    }
-    reloadCard();
-    updateLocalStorage();
-   
-    var modal = document.getElementById("modal-cart");
-    
-    modal.classList.remove("hidden");
-    
-    modal.classList.add("-translate-y-full");
-    
-    setTimeout(function() {
-        modal.classList.remove("-translate-y-full");
-        
-        setTimeout(function() {
-            modal.classList.add("-translate-y-full");
-            
-            setTimeout(function() {
-                modal.classList.add("hidden");
-            }, 300); 
-        }, 4000); 
-    }, 0); 
-
-}
-
-function updateLocalStorage() {
-    localStorage.setItem('carrinho', JSON.stringify(listCards));
-}
-
-document.getElementById('close').addEventListener('click', function() {
-    
-    location.reload();
-});
-
-function adicionarAoCarrinho4(key) {
-    if (!listCards[key]) {
-        listCards[key] = JSON.parse(JSON.stringify(products4[key]));
-        listCards[key].quantity = 1;
-    } else {
-        listCards[key].quantity++;
-    }
-    reloadCard();
-    updateLocalStorage();
-    
-    var modal = document.getElementById("modal-cart");
-    
-    modal.classList.remove("hidden");
-    
-    modal.classList.add("-translate-y-full");
-    
-    setTimeout(function() {
-        modal.classList.remove("-translate-y-full");
-        
-        setTimeout(function() {
-            modal.classList.add("-translate-y-full");
-            
-            setTimeout(function() {
-                modal.classList.add("hidden");
-            }, 300); 
-        }, 4000); 
-    }, 0); 
-
-}
-
-function updateLocalStorage() {
-    localStorage.setItem('carrinho', JSON.stringify(listCards));
-}
-
-document.getElementById('close').addEventListener('click', function() {
-
-    location.reload();
-});
+initApp();
 
 
 // ============================== Whats App ==============================
@@ -570,8 +447,6 @@ function enviarMensagem() {
     var url = 'https://wa.me/' + numeroDestino + '?text=' + mensagem;
 
     window.open(url, '_blank');
+    enviarMensagem(numeroDestino, mensagem);
 }
-
-enviarMensagem(numeroDestino, mensagem);
-
 
