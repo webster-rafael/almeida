@@ -661,16 +661,16 @@ video {
   z-index: 10;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .z-30 {
   z-index: 30;
 }
 
 .z-\[10px\] {
   z-index: 10px;
-}
-
-.z-20 {
-  z-index: 20;
 }
 
 .m-0 {
@@ -1368,6 +1368,7 @@ video {
 .list3 .item:hover
  {
   background-color: #e9e6e6;
+  color: black;
 }
 
 .list4 .item:hover,
