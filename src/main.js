@@ -429,7 +429,7 @@ initApp();
 
 // ============================== Whats App ==============================
 function enviarMensagem() {
-    var numeroDestino = '67996389988'; 
+    var numeroDestino = '67998374586'; 
     var idPedido = Math.floor(Math.random() * 10000 + 1);
     var mensagem = 'Pedido número ' + idPedido + ':\n\n'; 
 
